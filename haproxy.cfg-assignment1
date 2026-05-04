@@ -44,6 +44,6 @@ listen stats  # веб-страница со статистикой
 listen web_tcp
 
 	bind :1325
-
+    balance roundrobin
 	server s1 127.0.0.1:8888 check inter 3s
 	server s2 127.0.0.1:9999 check inter 3s
